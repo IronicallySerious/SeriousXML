@@ -1,0 +1,1 @@
+#include "s_closed_node.h"

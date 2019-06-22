@@ -116,15 +116,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\closed_node.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\s_closed_node.h" />
     <ClInclude Include="src\errors.h" />
     <ClInclude Include="src\log.h" />
-    <ClInclude Include="src\node.h" />
+    <ClInclude Include="src\i_node.h" />
     <ClInclude Include="src\reader.h" />
+    <ClInclude Include="src\XMLTokenizer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\closed_node.cpp" />
+    <ClCompile Include="src\error.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\node.cpp" />
+    <ClCompile Include="src\i_node.cpp" />
     <ClCompile Include="src\reader.cpp" />
+    <ClCompile Include="src\s_closed_node.cpp" />
+    <ClCompile Include="src\XMLTokenizer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="src\eg\simple.xml" />
