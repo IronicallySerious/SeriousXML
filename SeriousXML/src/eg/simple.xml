@@ -1,0 +1,6 @@
+<xml>
+  <child1/>
+  <child2>
+    Text inside child2
+  </child2>
+</xml>
