@@ -1,4 +1,4 @@
-#include "XMLTokenizer.h"
+#include "xml_tokenizer.h"
 #include <vector>
 
 std::vector<std::string> XMLTokenizer::Tokenize(std::string Raw)

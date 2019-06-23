@@ -8,7 +8,7 @@ private:
 	std::vector<INode *> m_Children;
 
 public:
-	ClosedNode() = default;
+	ClosedNode(std::string Name);
 	ClosedNode(ClosedNode &) = default;
 	~ClosedNode() = default;
 
