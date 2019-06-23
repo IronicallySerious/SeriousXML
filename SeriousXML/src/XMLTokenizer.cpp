@@ -1,24 +1,55 @@
 #include "XMLTokenizer.h"
-
-#include <stack>
+#include <vector>
 
 std::vector<std::string> XMLTokenizer::Tokenize(std::string Raw)
 {
-	std::stack<std::string> Tokens;
+	std::vector<std::string> Tokens;
 
-	bool TextScope = false;
-	bool BracketScopeEnable = false;
-
-	for (std::string::iterator ch = Raw.begin(); ch != Raw.end(); ch++)
+	for (std::string::iterator ch = Raw.begin(); ch != Raw.end(); (ch != Raw.end()) ? ch++ : ch)
 	{
-		BracketScopeEnable =
-			(*ch == '<') ?
-			true : (*ch == '>') ?
-			false : false;
+		std::string Token("");
 
+		if ((*ch == '\n') || (*ch == ' '))
+		{
+			continue; 
+		}
 
-		if (BracketScopeEnable == true)
+		if (*ch == '<')
+		{
+			while (*ch != '>')
+			{
+				Token.push_back(*ch);
+				
+				if (ch == Raw.end())
+				{
+					break;
+				}
+				ch++;
+			}
+			Token.push_back(*ch++);
+			Tokens.push_back(Token);
+		}
+		else
+		{
+			while (ch != Raw.end() && *ch != '<')
+			{
+				if (*ch == '\n')
+				{
+					ch++;
+					continue;
+				}
+
+				Token.push_back(*ch);
+				
+				if (ch == Raw.end())
+				{
+					break;
+				}
+				ch++;
+			}
+			Tokens.push_back(Token);
+		}
 	}
 
-	return std::vector<std::string>();
+	return Tokens;
 }

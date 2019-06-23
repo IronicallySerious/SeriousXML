@@ -1,5 +1,10 @@
 #include "i_node.h"
 
+INode::INode(std::string Name)
+	: m_Name(Name)
+{
+}
+
 INode::~INode()
 {
 }

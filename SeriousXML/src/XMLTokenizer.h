@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include "i_node.h"
 
 class XMLTokenizer
 {
