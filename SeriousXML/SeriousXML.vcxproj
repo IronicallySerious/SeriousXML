@@ -123,7 +123,8 @@
     <ClInclude Include="src\log.h" />
     <ClInclude Include="src\i_node.h" />
     <ClInclude Include="src\reader.h" />
-    <ClInclude Include="src\XMLTokenizer.h" />
+    <ClInclude Include="src\xml_tokenizer.h" />
+    <ClInclude Include="src\xml_tree_factory.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\closed_node.cpp" />
@@ -132,7 +133,8 @@
     <ClCompile Include="src\i_node.cpp" />
     <ClCompile Include="src\reader.cpp" />
     <ClCompile Include="src\s_closed_node.cpp" />
-    <ClCompile Include="src\XMLTokenizer.cpp" />
+    <ClCompile Include="src\xml_tokenizer.cpp" />
+    <ClCompile Include="src\xml_tree_factory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="src\eg\simple.xml" />
